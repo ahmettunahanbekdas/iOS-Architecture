@@ -10,9 +10,7 @@
 		0E0443792C7CC93A003BE3B4 /* MovieBoxAPI.docc in Sources */ = {isa = PBXBuildFile; fileRef = 0E0443782C7CC93A003BE3B4 /* MovieBoxAPI.docc */; };
 		0E04437A2C7CC93A003BE3B4 /* MovieBoxAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = 0E0443772C7CC93A003BE3B4 /* MovieBoxAPI.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0EB389A82C7F0E1D00A19747 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 0EB389A72C7F0E1D00A19747 /* Alamofire */; };
-		0EB389AF2C7F148300A19747 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EB389AE2C7F148300A19747 /* Model.swift */; };
-		0EFDDB562C7E01CD002386FA /* MovieBoxAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EFDDB552C7E01CD002386FA /* MovieBoxAPIClient.swift */; };
-		0EFDDB5E2C7E0276002386FA /* MovieBoxAPITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EFDDB5D2C7E0276002386FA /* MovieBoxAPITests.swift */; };
+		0EB389B22C7F325E00A19747 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EB389B12C7F325E00A19747 /* Movie.swift */; };
 		0EFDDB5F2C7E0276002386FA /* MovieBoxAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E0443742C7CC93A003BE3B4 /* MovieBoxAPI.framework */; };
 /* End PBXBuildFile section */
 
@@ -30,10 +28,8 @@
 		0E0443742C7CC93A003BE3B4 /* MovieBoxAPI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MovieBoxAPI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E0443772C7CC93A003BE3B4 /* MovieBoxAPI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MovieBoxAPI.h; sourceTree = "<group>"; };
 		0E0443782C7CC93A003BE3B4 /* MovieBoxAPI.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = MovieBoxAPI.docc; sourceTree = "<group>"; };
-		0EB389AE2C7F148300A19747 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
-		0EFDDB552C7E01CD002386FA /* MovieBoxAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieBoxAPIClient.swift; sourceTree = "<group>"; };
+		0EB389B12C7F325E00A19747 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		0EFDDB5B2C7E0276002386FA /* MovieBoxAPITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MovieBoxAPITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		0EFDDB5D2C7E0276002386FA /* MovieBoxAPITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieBoxAPITests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,8 +55,8 @@
 		0E04436A2C7CC93A003BE3B4 = {
 			isa = PBXGroup;
 			children = (
+				0EB389B02C7F30FF00A19747 /* DTOs */,
 				0E0443762C7CC93A003BE3B4 /* MovieBoxAPI */,
-				0EFDDB5C2C7E0276002386FA /* MovieBoxAPITests */,
 				0E0443752C7CC93A003BE3B4 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -79,18 +75,16 @@
 			children = (
 				0E0443772C7CC93A003BE3B4 /* MovieBoxAPI.h */,
 				0E0443782C7CC93A003BE3B4 /* MovieBoxAPI.docc */,
-				0EFDDB552C7E01CD002386FA /* MovieBoxAPIClient.swift */,
-				0EB389AE2C7F148300A19747 /* Model.swift */,
 			);
 			path = MovieBoxAPI;
 			sourceTree = "<group>";
 		};
-		0EFDDB5C2C7E0276002386FA /* MovieBoxAPITests */ = {
+		0EB389B02C7F30FF00A19747 /* DTOs */ = {
 			isa = PBXGroup;
 			children = (
-				0EFDDB5D2C7E0276002386FA /* MovieBoxAPITests.swift */,
+				0EB389B12C7F325E00A19747 /* Movie.swift */,
 			);
-			path = MovieBoxAPITests;
+			path = DTOs;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -208,8 +202,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0EB389AF2C7F148300A19747 /* Model.swift in Sources */,
-				0EFDDB562C7E01CD002386FA /* MovieBoxAPIClient.swift in Sources */,
+				0EB389B22C7F325E00A19747 /* Movie.swift in Sources */,
 				0E0443792C7CC93A003BE3B4 /* MovieBoxAPI.docc in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -218,7 +211,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0EFDDB5E2C7E0276002386FA /* MovieBoxAPITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -429,6 +421,7 @@
 		0EFDDB632C7E0276002386FA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 6HT5X4W7TW;
@@ -445,6 +438,7 @@
 		0EFDDB642C7E0276002386FA /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 6HT5X4W7TW;
