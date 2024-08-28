@@ -20,6 +20,8 @@ public final class MovieBoxAPIClient {
     public static func testAlamofire() {
             let url = "https://jsonplaceholder.typicode.com/posts/1"
             
+        
+        
             AF.request(url).responseDecodable(of: Post.self) { response in
                 switch response.result {
                 case .success(let post):
