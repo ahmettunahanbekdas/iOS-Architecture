@@ -6,10 +6,10 @@
 //
 
 import Foundation
+import Alamofire
 
-public class MovieBoxAPIClient {
-    
+public final class MovieBoxAPIClient {
     public static func testRun() {
-        print("testRun Runs!")
+        print("testRun runs!")
     }
 }

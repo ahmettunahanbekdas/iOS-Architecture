@@ -9,9 +9,8 @@ import XCTest
 import MovieBoxAPI
 
 final class MovieBoxAPITests: XCTestCase {
-
+    
     func testExample() throws {
         MovieBoxAPIClient.testRun()
     }
-
 }
