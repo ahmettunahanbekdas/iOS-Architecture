@@ -9,10 +9,12 @@
 /* Begin PBXBuildFile section */
 		0E25B5D32C80943E006556FE /* MovieBoxAPI.docc in Sources */ = {isa = PBXBuildFile; fileRef = 0E25B5D22C80943E006556FE /* MovieBoxAPI.docc */; };
 		0E25B5D92C80943F006556FE /* MovieBoxAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E25B5CE2C80943E006556FE /* MovieBoxAPI.framework */; };
-		0E25B5DE2C80943F006556FE /* MovieBoxAPITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E25B5DD2C80943F006556FE /* MovieBoxAPITests.swift */; };
 		0E25B5DF2C80943F006556FE /* MovieBoxAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = 0E25B5D12C80943E006556FE /* MovieBoxAPI.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0E25B6092C809491006556FE /* MovieBoxAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E25B6082C809491006556FE /* MovieBoxAPIClient.swift */; };
 		0E25B61A2C809911006556FE /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 0E25B6192C809911006556FE /* Alamofire */; };
+		0E25B61D2C80A9FF006556FE /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E25B61C2C80A9FF006556FE /* Movie.swift */; };
+		0E25B61F2C80AE16006556FE /* MovieTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E25B61E2C80AE16006556FE /* MovieTests.swift */; };
+		0E25B6222C80AE74006556FE /* Decoders.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E25B6212C80AE74006556FE /* Decoders.swift */; };
+		0E25B6252C80AF81006556FE /* movie.json in Resources */ = {isa = PBXBuildFile; fileRef = 0E25B6242C80AF81006556FE /* movie.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,8 +32,10 @@
 		0E25B5D12C80943E006556FE /* MovieBoxAPI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MovieBoxAPI.h; sourceTree = "<group>"; };
 		0E25B5D22C80943E006556FE /* MovieBoxAPI.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = MovieBoxAPI.docc; sourceTree = "<group>"; };
 		0E25B5D82C80943F006556FE /* MovieBoxAPITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MovieBoxAPITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		0E25B5DD2C80943F006556FE /* MovieBoxAPITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieBoxAPITests.swift; sourceTree = "<group>"; };
-		0E25B6082C809491006556FE /* MovieBoxAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieBoxAPIClient.swift; sourceTree = "<group>"; };
+		0E25B61C2C80A9FF006556FE /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
+		0E25B61E2C80AE16006556FE /* MovieTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTests.swift; sourceTree = SOURCE_ROOT; };
+		0E25B6212C80AE74006556FE /* Decoders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Decoders.swift; sourceTree = "<group>"; };
+		0E25B6242C80AF81006556FE /* movie.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = movie.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,7 +79,8 @@
 		0E25B5D02C80943E006556FE /* MovieBoxAPI */ = {
 			isa = PBXGroup;
 			children = (
-				0E25B6082C809491006556FE /* MovieBoxAPIClient.swift */,
+				0E25B6202C80AE40006556FE /* Helpers */,
+				0E25B61B2C80A9EC006556FE /* DTOs */,
 				0E25B5D12C80943E006556FE /* MovieBoxAPI.h */,
 				0E25B5D22C80943E006556FE /* MovieBoxAPI.docc */,
 			);
@@ -85,9 +90,34 @@
 		0E25B5DC2C80943F006556FE /* MovieBoxAPITests */ = {
 			isa = PBXGroup;
 			children = (
-				0E25B5DD2C80943F006556FE /* MovieBoxAPITests.swift */,
+				0E25B6232C80AF5C006556FE /* Resources */,
+				0E25B61E2C80AE16006556FE /* MovieTests.swift */,
 			);
 			path = MovieBoxAPITests;
+			sourceTree = "<group>";
+		};
+		0E25B61B2C80A9EC006556FE /* DTOs */ = {
+			isa = PBXGroup;
+			children = (
+				0E25B61C2C80A9FF006556FE /* Movie.swift */,
+			);
+			path = DTOs;
+			sourceTree = "<group>";
+		};
+		0E25B6202C80AE40006556FE /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				0E25B6212C80AE74006556FE /* Decoders.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		0E25B6232C80AF5C006556FE /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				0E25B6242C80AF81006556FE /* movie.json */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -158,6 +188,7 @@
 					};
 					0E25B5D72C80943F006556FE = {
 						CreatedOnToolsVersion = 15.4;
+						LastSwiftMigration = 1540;
 					};
 				};
 			};
@@ -195,6 +226,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0E25B6252C80AF81006556FE /* movie.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -205,8 +237,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0E25B6092C809491006556FE /* MovieBoxAPIClient.swift in Sources */,
+				0E25B6222C80AE74006556FE /* Decoders.swift in Sources */,
 				0E25B5D32C80943E006556FE /* MovieBoxAPI.docc in Sources */,
+				0E25B61D2C80A9FF006556FE /* Movie.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -214,7 +247,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0E25B5DE2C80943F006556FE /* MovieBoxAPITests.swift in Sources */,
+				0E25B61F2C80AE16006556FE /* MovieTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -426,6 +459,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 6HT5X4W7TW;
@@ -434,6 +468,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.ahmettunahanbekdas.MovieBoxAPITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -443,6 +478,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 6HT5X4W7TW;
