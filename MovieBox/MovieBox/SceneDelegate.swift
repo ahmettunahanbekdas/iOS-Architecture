@@ -2,7 +2,7 @@
 //  SceneDelegate.swift
 //  MovieBox
 //
-//  Created by Ahmet Tunahan Bekdaş on 26.08.2024.
+//  Created by Ahmet Tunahan Bekdaş on 29.08.2024.
 //
 
 import UIKit
