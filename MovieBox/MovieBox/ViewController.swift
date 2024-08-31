@@ -9,8 +9,13 @@ import UIKit
 import MovieBoxAPI
 class ViewController: UIViewController {
 
+    let services: TopMovieServiceProtocol = TopMovieService()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        services.fetchMovies { (result) in
+            print(result)
+        }
     }
 }
 
