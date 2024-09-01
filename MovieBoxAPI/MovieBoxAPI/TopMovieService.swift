@@ -4,7 +4,7 @@
 //
 //  Created by Ahmet Tunahan Bekdaş on 30.08.2024.
 //
-
+//
 import Foundation
 import Alamofire
 
@@ -27,6 +27,7 @@ public class TopMovieService: TopMovieServiceProtocol {
     
     public init() {}
     
+    
     public func fetchMovies(completion: @escaping (Result<TopMovieResponse>) -> Void) {
         
         let urlString = "https://rss.applemarketingtools.com/api/v2/us/music/most-played/25/albums.json"
@@ -47,6 +48,4 @@ public class TopMovieService: TopMovieServiceProtocol {
         }
     }
 }
-
-
 
