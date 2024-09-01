@@ -78,7 +78,6 @@
 				0E25B5F32C809474006556FE /* MovieBox */,
 				0E25B60A2C809776006556FE /* Vendor */,
 				0E25B5F22C809474006556FE /* Products */,
-				0E25B6142C8097FF006556FE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -119,13 +118,6 @@
 				0E25B6132C8097C5006556FE /* MovieBoxAPITests.xctest */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		0E25B6142C8097FF006556FE /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

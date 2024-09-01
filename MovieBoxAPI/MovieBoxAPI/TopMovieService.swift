@@ -9,17 +9,11 @@ import Foundation
 import Alamofire
 
 public protocol TopMovieServiceProtocol {
-    //Bu şekilde de bir yapı kullabiliriz fakat biz kendimiz bir yapı oluşturucağız video içeriğinde de olduğu gibi (Result)
-    //    func fetchMovies(completion: (Result<[Movie], Error>) -> Void)
-    
     func fetchMovies(completion: @escaping (Result<TopMovieResponse>) -> Void)
 }
 
 
 public class TopMovieService: TopMovieServiceProtocol {
-    //    func fetchMovies(completion: (Result<[Movie], Error>) -> Void){}
-    
-    
     public enum Error: Swift.Error {
         case serializationError(internal: Swift.Error)
         case networkError(internal: Swift.Error)

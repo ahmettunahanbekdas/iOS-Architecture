@@ -85,12 +85,12 @@
 		0E25B5D02C80943E006556FE /* MovieBoxAPI */ = {
 			isa = PBXGroup;
 			children = (
+				0EAFE9E82C822167003C9B30 /* TopMovieService.swift */,
 				0EAFE9E52C82167D003C9B30 /* Responses */,
 				0E25B6202C80AE40006556FE /* Helpers */,
 				0E25B61B2C80A9EC006556FE /* DTOs */,
 				0E25B5D12C80943E006556FE /* MovieBoxAPI.h */,
 				0E25B5D22C80943E006556FE /* MovieBoxAPI.docc */,
-				0EAFE9E82C822167003C9B30 /* TopMovieService.swift */,
 			);
 			path = MovieBoxAPI;
 			sourceTree = "<group>";
