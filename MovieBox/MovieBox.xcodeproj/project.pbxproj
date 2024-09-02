@@ -13,7 +13,9 @@
 		0E25B6012C809475006556FE /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 0E25B6002C809475006556FE /* Base */; };
 		0E25B6152C809805006556FE /* MovieBoxAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E25B6112C8097C5006556FE /* MovieBoxAPI.framework */; };
 		0E25B6162C809805006556FE /* MovieBoxAPI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0E25B6112C8097C5006556FE /* MovieBoxAPI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		0ED5355D2C85AE7F00650F86 /* MoviListContracts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED5355C2C85AE7F00650F86 /* MoviListContracts.swift */; };
+		0ED5355D2C85AE7F00650F86 /* MovieListContracts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED5355C2C85AE7F00650F86 /* MovieListContracts.swift */; };
+		0ED5355F2C85AFA300650F86 /* MovieList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0ED5355E2C85AFA300650F86 /* MovieList.storyboard */; };
+		0ED535612C85B09400650F86 /* MovieListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED535602C85B09400650F86 /* MovieListView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,7 +57,9 @@
 		0E25B6002C809475006556FE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0E25B6022C809475006556FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0E25B60B2C8097C5006556FE /* MovieBoxAPI.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = MovieBoxAPI.xcodeproj; path = ../../MovieBoxAPI/MovieBoxAPI.xcodeproj; sourceTree = "<group>"; };
-		0ED5355C2C85AE7F00650F86 /* MoviListContracts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviListContracts.swift; sourceTree = "<group>"; };
+		0ED5355C2C85AE7F00650F86 /* MovieListContracts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListContracts.swift; sourceTree = "<group>"; };
+		0ED5355E2C85AFA300650F86 /* MovieList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MovieList.storyboard; sourceTree = "<group>"; };
+		0ED535602C85B09400650F86 /* MovieListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,7 +140,7 @@
 		0ED535592C85AD5100650F86 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				0ED5355B2C85AE6900650F86 /* MoviList */,
+				0ED5355B2C85AE6900650F86 /* MovieList */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -149,12 +153,14 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		0ED5355B2C85AE6900650F86 /* MoviList */ = {
+		0ED5355B2C85AE6900650F86 /* MovieList */ = {
 			isa = PBXGroup;
 			children = (
-				0ED5355C2C85AE7F00650F86 /* MoviListContracts.swift */,
+				0ED5355C2C85AE7F00650F86 /* MovieListContracts.swift */,
+				0ED5355E2C85AFA300650F86 /* MovieList.storyboard */,
+				0ED535602C85B09400650F86 /* MovieListView.swift */,
 			);
-			path = MoviList;
+			path = MovieList;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -239,6 +245,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0ED5355F2C85AFA300650F86 /* MovieList.storyboard in Resources */,
 				0E25B5FE2C809475006556FE /* Assets.xcassets in Resources */,
 				0E25B6012C809475006556FE /* Base in Resources */,
 			);
@@ -251,7 +258,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0ED5355D2C85AE7F00650F86 /* MoviListContracts.swift in Sources */,
+				0ED5355D2C85AE7F00650F86 /* MovieListContracts.swift in Sources */,
+				0ED535612C85B09400650F86 /* MovieListView.swift in Sources */,
 				0E25B5F52C809474006556FE /* AppDelegate.swift in Sources */,
 				0E25B5F72C809474006556FE /* SceneDelegate.swift in Sources */,
 			);
