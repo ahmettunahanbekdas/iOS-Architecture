@@ -11,6 +11,6 @@ import MovieBoxAPI
 let app = AppContainer()
 
 final class AppContainer {
-    let router = AppRouter()
+//    let router = AppRouter()
     let service = TopMovieService()
 }
