@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Movie List View Controller-->
         <scene sceneID="Xs4-Hx-t1e">
             <objects>
-                <viewController id="uuf-hn-9LF" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MovieListViewController" id="uuf-hn-9LF" customClass="MovieListViewController" customModule="MovieBox" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bK2-m4-7ws" customClass="MovieListView" customModule="MovieBox" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -63,6 +63,9 @@
                             <outlet property="tableView" destination="uId-x1-4yS" id="fQG-t3-fVI"/>
                         </connections>
                     </view>
+                    <connections>
+                        <outlet property="customView" destination="bK2-m4-7ws" id="5VB-Xg-gGm"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wxi-us-RhR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

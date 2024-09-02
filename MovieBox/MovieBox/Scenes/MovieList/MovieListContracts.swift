@@ -7,11 +7,6 @@
 
 import Foundation
 
-struct MoviePresentation {
-    let title: String
-    let detail: String
-}
-
 protocol MovieListViewProtocol {
     func updateMovieList(_ movieList: [MoviePresentation])
 }

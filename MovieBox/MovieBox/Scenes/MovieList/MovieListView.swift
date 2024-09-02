@@ -8,9 +8,7 @@
 import UIKit
 
 final class MovieListView: UIView {
-    
     private var movieList: [MoviePresentation] = []
-    
     @IBOutlet weak var tableView: UITableView!
 }
 
@@ -31,7 +29,7 @@ extension MovieListView: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return movieList.count
     }
 }
 
