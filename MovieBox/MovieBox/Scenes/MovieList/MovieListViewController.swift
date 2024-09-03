@@ -17,14 +17,14 @@ final class MovieListViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        title = "Movies"
         customView.delegate = self
-        showData()
+        getData()
     }
 }
 
-extension MovieListViewController: MovieListViewDelegate{
-    
-    func showData() {
+extension MovieListViewController{
+    func getData() {
         service.fetchMovies { [weak self] result in
             guard let self = self else { return }
             switch result {
@@ -38,11 +38,13 @@ extension MovieListViewController: MovieListViewDelegate{
             }
         }
     }
-    
-    func didSelectMovie(at index: Int) {
-        let movie = movieList[index]
-        let detailViewController = MovieDetailBuilder.make(with: movie)
-        show(detailViewController, sender: nil)
+}
+
+extension MovieListViewController: MovieListViewDelegate {
+    func didSelectedMovie(at index: Int) {
+        let selectedMovie = movieList[index]
+        let movieDetailViewController = MovieDetailBuilder.make(with: selectedMovie)
+        show(movieDetailViewController, sender: nil)
     }
 }
 

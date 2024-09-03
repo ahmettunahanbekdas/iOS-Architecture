@@ -7,12 +7,13 @@
 
 import Foundation
 
-
 protocol MovieListViewProtocol {
-    var  delegate: MovieListViewDelegate? { get set }
+    var delegate: MovieListViewDelegate? { get set }
     func updateMovieList(_ movieList: [MoviePresentation])
 }
 
 protocol MovieListViewDelegate: AnyObject {
-    func didSelectMovie(at index: Int)
+    func didSelectedMovie(at index: Int)
 }
+ 
+

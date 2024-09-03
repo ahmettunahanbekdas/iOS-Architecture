@@ -11,16 +11,13 @@ import MovieBoxAPI
 struct MovieDetailPresentation {
     let title: String
     let detail: String
-    let genre: String
+    let genre: Date
 }
 
 extension MovieDetailPresentation {
     init(movie: Movie) {
         self.title = movie.name!
         self.detail = movie.artistName!
-        self.genre = movie.name!
+        self.genre = movie.releaseDate!
     }
 }
-
-
-

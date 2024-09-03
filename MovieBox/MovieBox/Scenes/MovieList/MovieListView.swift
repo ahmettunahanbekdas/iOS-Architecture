@@ -9,9 +9,9 @@ import UIKit
 
 
 final class MovieListView: UIView {
-    weak var delegate: MovieListViewDelegate?
-    private var movieList: [MoviePresentation] = []
     @IBOutlet weak var tableView: UITableView!
+    private var movieList: [MoviePresentation] = []
+    weak var delegate: MovieListViewDelegate?
 }
 
 extension MovieListView: MovieListViewProtocol {
@@ -37,7 +37,7 @@ extension MovieListView: UITableViewDataSource {
 
 extension MovieListView: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        delegate?.didSelectMovie(at: indexPath.row)
+        delegate?.didSelectedMovie(at: indexPath.row)
     }
 }
 

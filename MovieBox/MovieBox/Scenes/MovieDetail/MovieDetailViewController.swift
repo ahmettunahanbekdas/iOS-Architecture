@@ -9,8 +9,10 @@ import UIKit
 import MovieBoxAPI
 
 final class MovieDetailViewController: UIViewController {
-    var movie: Movie!
+    
     @IBOutlet var customView: MovieDetailView!
+
+    var movie: Movie!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,6 +20,6 @@ final class MovieDetailViewController: UIViewController {
     }
     
     private func updateView() {
-        self.customView.updateMovieDetail(movie.map(MovieDetailPresentation.init)!)
+        customView.updateMovieDetail(movie.map(MovieDetailPresentation.init)!)
     }
 }
