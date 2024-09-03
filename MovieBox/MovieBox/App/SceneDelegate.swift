@@ -10,25 +10,12 @@ import UIKit
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     
     var window: UIWindow?
-    // private let appRouter = AppRouter()
     
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
-        // Uygulamanın sahnesine uygun bir UIWindow oluşturun
+        // SceneDelegate'deki window'u başlatın
         guard let windowScene = (scene as? UIWindowScene) else { return }
-        
-        // Yeni bir UIWindow oluşturun ve bunu windowScene ile ilişkilendirin
         window = UIWindow(windowScene: windowScene)
-        
-        // Storyboard'dan ana view controller'ı alın
-        let storyboard = UIStoryboard(name: "MovieList", bundle: nil)
-        let viewController = storyboard.instantiateViewController(withIdentifier: "MovieListViewController") as! MovieListViewController
-        
-        // View Controller'ı ayarlayın
-        viewController.services = app.service // Servisi view controller'a atayın
-        
-        // Root view controller olarak ayarlayın
-        window?.rootViewController = viewController
-        window?.makeKeyAndVisible()
+        app.router.start()
     }
     
     func sceneDidDisconnect(_ scene: UIScene) {

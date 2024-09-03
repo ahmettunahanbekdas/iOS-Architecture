@@ -9,22 +9,40 @@ import UIKit
 import MovieBoxAPI
 
 final class MovieListViewController: UIViewController {
+    
     @IBOutlet var customView: MovieListView!
-    var services: TopMovieServiceProtocol!
+    
+    var service: TopMovieServiceProtocol!
+    var movieList: [Movie] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        services.fetchMovies { [weak self] result in
+        customView.delegate = self
+        showData()
+    }
+}
+
+extension MovieListViewController: MovieListViewDelegate{
+    
+    func showData() {
+        service.fetchMovies { [weak self] result in
             guard let self = self else { return }
             switch result {
             case .succes(let value):
-                print("ss")
+                self.movieList = value.results
                 self.customView.updateMovieList(value.results.map(MoviePresentation.init))
-                print(value)
             case .failure(let error):
                 print(error)
+            @unknown default:
+                print("Error")
             }
         }
+    }
+    
+    func didSelectMovie(at index: Int) {
+        let movie = movieList[index]
+        let detailViewController = MovieDetailBuilder.make(with: movie)
+        show(detailViewController, sender: nil)
     }
 }
 
