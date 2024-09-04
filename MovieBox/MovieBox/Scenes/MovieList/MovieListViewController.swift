@@ -10,7 +10,7 @@ import MovieBoxAPI
 
 final class MovieListViewController: UIViewController {
     
-    @IBOutlet var customView: MovieListView!
+    @IBOutlet weak var customView: MovieListViewProtocol!
     
     var service: TopMovieServiceProtocol!
     var movieList: [Movie] = []
@@ -25,6 +25,8 @@ final class MovieListViewController: UIViewController {
 
 extension MovieListViewController{
     func getData() {
+        customView.setLoading(true)
+//        sleep(4)
         service.fetchMovies { [weak self] result in
             guard let self = self else { return }
             switch result {
@@ -37,6 +39,7 @@ extension MovieListViewController{
                 print("Error")
             }
         }
+        customView.setLoading(false)
     }
 }
 

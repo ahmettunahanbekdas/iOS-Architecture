@@ -8,13 +8,17 @@
 import UIKit
 
 
-final class MovieListView: UIView {
+ class MovieListView: UIView {
     @IBOutlet weak var tableView: UITableView!
     private var movieList: [MoviePresentation] = []
     weak var delegate: MovieListViewDelegate?
 }
 
 extension MovieListView: MovieListViewProtocol {
+    func setLoading(_ isLoading: Bool) {
+        UIApplication.shared.isNetworkActivityIndicatorVisible = isLoading
+    }
+    
     func updateMovieList(_ movieList: [MoviePresentation]) {
         self.movieList = movieList
         tableView.reloadData()

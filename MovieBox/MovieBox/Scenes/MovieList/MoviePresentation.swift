@@ -8,13 +8,19 @@
 import Foundation
 import MovieBoxAPI
 
-struct MoviePresentation {
+class MoviePresentation: NSObject {
     let title: String
     let detail: String
+    
+    init(title: String, detail: String) {
+        self.title = title
+        self.detail = detail
+        super.init()
+    }
 }
 
 extension MoviePresentation {
-    init(movie: Movie) {
+    convenience init(movie: Movie) {
         self.init(title: movie.name!, detail: movie.artistName!)
     }
 }
