@@ -11,7 +11,6 @@ import XCTest
 
 
 final class MovieBoxTests: XCTestCase {
-    
     var service: MockTopMovieService!
     var view: MockMovieListView!
     var controller: MovieListViewController!
@@ -22,20 +21,29 @@ final class MovieBoxTests: XCTestCase {
         view = MockMovieListView()
         controller = MovieListViewController()
         
-        controller.customView = self.view
+        controller.customView = view
         controller.service = service
     }
-    
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
-    
-    func testMovieList() {
+
+    // MARK: - testMovieList()
+    func testMovieList() throws {
         
+        // Given: Servisin başlatıldığı ve bir film nesnesinin yüklendiği bir durum
+        let movie1 = try ResourceLoader.loadMovie(resource: .movie1)
+        let movie2 = try ResourceLoader.loadMovie(resource: .movie2)
+        service.movies = [movie1, movie2]
+        
+        // When
+        controller.loadViewIfNeeded()
+        
+        // Then
+        XCTAssertEqual(view.movieList?.count, 2)
+        XCTAssertEqual(try view.movieList?.element(at: 0).title, movie1.name)
+        XCTAssertEqual(try view.movieList?.element(at: 1).title, movie2.name)
+//        XCTAssertEqual(try view.movieList?[0].title, movie1.artistName)
     }
     
-    
-    
+    // MARK: - MockTopMovieService
     final class MockTopMovieService: TopMovieServiceProtocol {
         var movies: [Movie] = []
         
@@ -44,6 +52,7 @@ final class MovieBoxTests: XCTestCase {
         }
     }
     
+    // MARK: - MockMovieListView
     final class MockMovieListView: MovieListViewProtocol {
         var delegate: (any MovieBox.MovieListViewDelegate)?
         var isLoadingValue: [Bool] = []

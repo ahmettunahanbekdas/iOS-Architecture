@@ -28,10 +28,12 @@ public class TopMovieService: TopMovieServiceProtocol {
         AF.request(urlString).response { (response) in
             switch response.result {
             case.success(let data):
-                let decoder = Decoders.plainDataDecoder
+                print(data)
+                let decoder = Decoders.plainDateDecoder
                 do{
                     let response = try decoder.decode(TopMovieResponse.self, from: data!)
                     completion(.succes(response))
+//                    print(response)
                 }catch {
                     completion(.failure(Error.serializationError(internal: error)))
                 }

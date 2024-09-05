@@ -26,7 +26,6 @@ final class MovieListViewController: UIViewController {
 extension MovieListViewController{
     func getData() {
         customView.setLoading(true)
-//        sleep(4)
         service.fetchMovies { [weak self] result in
             guard let self = self else { return }
             switch result {

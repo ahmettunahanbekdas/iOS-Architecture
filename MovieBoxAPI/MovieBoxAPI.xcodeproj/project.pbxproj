@@ -18,6 +18,7 @@
 		0E4FE0912C830F3D004A3EDB /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E4FE0902C830F3D004A3EDB /* Result.swift */; };
 		0EAFE9E72C821691003C9B30 /* TopMovieResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EAFE9E62C821691003C9B30 /* TopMovieResponse.swift */; };
 		0EAFE9E92C822167003C9B30 /* TopMovieService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EAFE9E82C822167003C9B30 /* TopMovieService.swift */; };
+		0EBDC8DF2C899D2C005A6A5C /* ResourceLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EBDC8DE2C899D2C005A6A5C /* ResourceLoader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +43,7 @@
 		0E4FE0902C830F3D004A3EDB /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		0EAFE9E62C821691003C9B30 /* TopMovieResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopMovieResponse.swift; sourceTree = "<group>"; };
 		0EAFE9E82C822167003C9B30 /* TopMovieService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopMovieService.swift; sourceTree = "<group>"; };
+		0EBDC8DE2C899D2C005A6A5C /* ResourceLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourceLoader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +127,7 @@
 			isa = PBXGroup;
 			children = (
 				0E25B6242C80AF81006556FE /* movie.json */,
+				0EBDC8DE2C899D2C005A6A5C /* ResourceLoader.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -267,6 +270,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0EBDC8DF2C899D2C005A6A5C /* ResourceLoader.swift in Sources */,
 				0E25B61F2C80AE16006556FE /* MovieTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
