@@ -183,10 +183,10 @@
 			isa = PBXGroup;
 			children = (
 				0ED535592C85AD5100650F86 /* Scenes */,
-				0ED5355A2C85AD5700650F86 /* Resources */,
 				0ED535552C85AD3200650F86 /* App */,
 				0E1412B62C88AC6100BD35AD /* Helpers */,
 				0ED535582C85AD3700650F86 /* Supporting Files */,
+				0ED5355A2C85AD5700650F86 /* Resources */,
 			);
 			path = MovieBox;
 			sourceTree = "<group>";
@@ -258,10 +258,10 @@
 			children = (
 				0ED535602C85B09400650F86 /* MovieListView.swift */,
 				0ED535622C85B40F00650F86 /* MovieListViewController.swift */,
-				0ED5355C2C85AE7F00650F86 /* MovieListContracts.swift */,
 				0ED535642C85BA6800650F86 /* MoviePresentation.swift */,
 				0ED5356A2C85BEC600650F86 /* MovieListBuilder.swift */,
 				0ED5355E2C85AFA300650F86 /* MovieList.storyboard */,
+				0ED5355C2C85AE7F00650F86 /* MovieListContracts.swift */,
 			);
 			path = MovieList;
 			sourceTree = "<group>";

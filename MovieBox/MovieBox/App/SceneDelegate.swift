@@ -5,47 +5,54 @@
 //  Created by Ahmet Tunahan Bekdaş on 29.08.2024.
 //
 
+//SceneDelegate sınıfı, iOS uygulamasının kullanıcı arayüzü sahnelerini yönetir ve uygulamanın yaşam döngüsü olaylarına yanıt verir. Her bir metod, sahnenin yaşam döngüsündeki farklı aşamaları yönetmek için kullanılır ve uygulamanın kullanıcı etkileşimlerine uygun şekilde tepki vermesini sağlar.
+
+// ????? Bundle, Type Casting, Dependency Injection,
+
+// P.1 -> SceneDelegate sınıfı, iOS uygulamasının kullanıcı arayüzü sahnelerini yönetir ve uygulamanın yaşam döngüsü olaylarına yanıt verir. Her bir metod, sahnenin yaşam döngüsündeki farklı aşamaları yönetmek için kullanılır ve uygulamanın kullanıcı etkileşimlerin
+
+// 1. window: Uygulamanın ana penceresi. UIWindow türünde bir optional özelliktir ve uygulamanın ana görünümünü (user interface) barındırır.
+// 2. func scene: Bu metod, sahne (scene) ilk kez oluşturulduğunda çağrılır. Genellikle uygulamanın ana penceresini başlatmak ve ilk ekranı ayarlamak için kullanılır.
+// 3. Yeni bir UIWindow nesnesi oluşturur ve onu sahneye atar.
+// 4. start(): Uygulamanın başlangıç noktası belirlenir. Bu genellikle uygulamanın ilk ekranını veya ana görünümünü yükler.
+
+
 import UIKit
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
-    
     var window: UIWindow?
     
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
-        // SceneDelegate'deki window'u başlatın
         guard let windowScene = (scene as? UIWindowScene) else { return }
         window = UIWindow(windowScene: windowScene)
         app.router.start()
+        
     }
     
     func sceneDidDisconnect(_ scene: UIScene) {
-        // Called as the scene is being released by the system.
-        // This occurs shortly after the scene enters the background, or when its session is discarded.
-        // Release any resources associated with this scene that can be re-created the next time the scene connects.
-        // The scene may re-connect later, as its session was not necessarily discarded (see `application:didDiscardSceneSessions` instead).
+
     }
     
     func sceneDidBecomeActive(_ scene: UIScene) {
-        // Called when the scene has moved from an inactive state to an active state.
-        // Use this method to restart any tasks that were paused (or not yet started) when the scene was inactive.
+    
     }
     
     func sceneWillResignActive(_ scene: UIScene) {
-        // Called when the scene will move from an active state to an inactive state.
-        // This may occur due to temporary interruptions (ex. an incoming phone call).
+       
     }
     
     func sceneWillEnterForeground(_ scene: UIScene) {
-        // Called as the scene transitions from the background to the foreground.
-        // Use this method to undo the changes made on entering the background.
+       
     }
     
     func sceneDidEnterBackground(_ scene: UIScene) {
-        // Called as the scene transitions from the foreground to the background.
-        // Use this method to save data, release shared resources, and store enough scene-specific state information
-        // to restore the scene back to its current state.
+        
     }
-    
-    
 }
 
+//        let viewController = MovieListBuilder.make()
+//        let navigationController = UINavigationController(rootViewController: viewController)
+//
+//        window?.rootViewController = navigationController
+//        window?.makeKeyAndVisible()
+//
