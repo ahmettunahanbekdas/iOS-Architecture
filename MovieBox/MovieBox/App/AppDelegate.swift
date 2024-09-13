@@ -5,14 +5,6 @@
 //  Created by Ahmet Tunahan Bekdaş on 29.08.2024.
 //
 
-// ?????
-
-// P.2
-
-// 1.
-// 2.
-// 3.
-
 import UIKit
 
 @main

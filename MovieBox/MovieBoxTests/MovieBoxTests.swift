@@ -27,6 +27,7 @@ final class MovieBoxTests: XCTestCase {
 
     // MARK: - testMovieList()
     func testMovieList() throws {
+        
         // Given: Servisin başlatıldığı ve bir film nesnesinin yüklendiği bir durum
         let movie1 = try ResourceLoader.loadMovie(resource: .movie1)
         let movie2 = try ResourceLoader.loadMovie(resource: .movie2)
@@ -53,7 +54,7 @@ final class MovieBoxTests: XCTestCase {
     
     // MARK: - MockMovieListView
     final class MockMovieListView: MovieListViewProtocol {
-        var delegate: MovieListViewDelegate?
+        var delegate: (any MovieBox.MovieListViewDelegate)?
         var isLoadingValue: [Bool] = []
         var movieList: [MoviePresentation]?
         
