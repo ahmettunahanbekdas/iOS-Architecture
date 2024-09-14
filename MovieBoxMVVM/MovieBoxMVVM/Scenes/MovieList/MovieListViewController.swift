@@ -10,7 +10,9 @@ import MovieBoxAPI
 
 final class MovieListViewController: UIViewController {
     
-
+    @IBOutlet weak var tableView: UITableView!
+    
+    var service: TopMovieService!
     
     override func viewDidLoad() {
         super.viewDidLoad()

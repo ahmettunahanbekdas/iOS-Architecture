@@ -9,8 +9,9 @@ import UIKit
 
 
  class MovieListView: UIView {
-    @IBOutlet weak var tableView: UITableView!
-    private var movieList: [MoviePresentation] = []
+     
+     @IBOutlet weak var tableView: UITableView!
+     private var movieList: [MoviePresentation] = []
     weak var delegate: MovieListViewDelegate?
 }
 
