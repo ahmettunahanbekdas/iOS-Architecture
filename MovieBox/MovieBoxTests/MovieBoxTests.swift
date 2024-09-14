@@ -37,6 +37,7 @@ final class MovieBoxTests: XCTestCase {
         controller.loadViewIfNeeded()
         
         // Then
+        XCTAssertEqual(view.isLoadingValue, [true, false])
         XCTAssertEqual(view.movieList?.count, 2)
         XCTAssertEqual(try view.movieList?.element(at: 0).title, movie1.name)
         XCTAssertEqual(try view.movieList?.element(at: 1).title, movie2.name)
@@ -54,7 +55,7 @@ final class MovieBoxTests: XCTestCase {
     
     // MARK: - MockMovieListView
     final class MockMovieListView: MovieListViewProtocol {
-        var delegate: (any MovieBox.MovieListViewDelegate)?
+        var delegate: MovieListViewDelegate?
         var isLoadingValue: [Bool] = []
         var movieList: [MoviePresentation]?
         

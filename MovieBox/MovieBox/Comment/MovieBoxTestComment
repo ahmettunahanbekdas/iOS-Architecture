@@ -1,0 +1,53 @@
+/*
+  Bu test, bir MovieListViewController'ın ve TopMovieService'nin nasıl çalıştığını simüle eden birim testtir.
+  Test senaryosunun temel amacı, servis üzerinden alınan filmlerin listeye doğru bir şekilde yüklendiğinden ve
+  görünüme (view) güncellenmiş şekilde yansıtıldığından emin olmaktır.
+
+  1. MovieBoxTests -> XCTestCase sınıfından türetilmiş, test senaryolarını içeren bir ana sınıftır.
+     Bu sınıfın içerisinde test metotları yer alır ve her test metodu belirli bir durumu test eder.
+     
+  2. service değişkeni -> MockTopMovieService isimli mock bir servis nesnesi.
+     Gerçek bir veri kaynağı yerine bu mock servis, test amaçlı kullanılır ve sahte veriler sağlar.
+     
+  3. view değişkeni -> MockMovieListView, gerçek kullanıcı arayüzü yerine kullanılan bir mock view.
+     Bu, kontrollerin arayüze olan etkisini izlemek için kullanılır.
+     
+  4. controller değişkeni -> MovieListViewController'ın bir örneği.
+     Bu controller, testin ana nesnesidir ve servis üzerinden veri alıp bu veriyi görünümde güncellemeyi sağlar.
+  
+  TEST ADIMLARI:
+  
+  - setUpWithError -> Her testten önce çalıştırılan metot, test için gereken nesneleri hazırlar.
+    Burada:
+    * Mock servis (MockTopMovieService), Mock View (MockMovieListView), Controller (MovieListViewController) örnekleri oluşturuluyor.
+    * Controller'ın "view" ve "service" özellikleri atanıyor, yani bu controller belirli bir servis ve view ile birlikte çalışacak.
+
+  - testMovieList() -> Bu testin asıl senaryosunu barındıran metottur.
+    * Given (Hazırlık):
+      - ResourceLoader kullanılarak iki adet sahte film nesnesi döndürülüyor (movie1, movie2).
+      - Bu filmler mock service (service.movies) ile ilişkilendiriliyor.
+      
+    * When (Aksiyon):
+      - controller.loadViewIfNeeded() çağrılıyor. Bu, view'in yüklenmesini sağlar ve controller'ın görünümle (mock view) olan etkileşimini başlatır.
+      
+    * Then (Doğrulama):
+      - Testte, Mock View'deki movieList array'inin 2 adet öğe içerdiği doğrulanıyor.
+      - İlk film (movie1) ile view'de bulunan movieList'teki ilk öğenin başlığı (title) karşılaştırılıyor.
+      - İkinci film (movie2) ile view'deki ikinci öğenin başlığı karşılaştırılıyor.
+  
+  MOCK SINIFLAR:
+  
+  1. MockTopMovieService:
+      - Gerçek TopMovieServiceProtocol'ün mock versiyonu.
+      - fetchMovies metodu, sahte filmler listesini döndürmek için kullanılıyor. Bu sayede test senaryoları için gerçek bir sunucuya ihtiyaç kalmadan veri simüle ediliyor.
+      
+  2. MockMovieListView:
+     - Bu mock view, test sırasında controller'ın updateMovieList ve setLoading metodlarına verdiği yanıtları izler. movieList özelliği güncellenen film listesini içerir.
+    
+  TESTİN AMACI
+    *  Testin amacı, controller'ın servisten aldığı film listesini doğru bir şekilde mock view'a yansıttığını doğrulamaktır. Testte:
+
+     - Filmlerin servisten doğru alınıp alınmadığı,
+     - View'da güncellemelerin doğru yapılıp yapılmadığı kontrol ediliyor.
+     - Bu test, hem MovieListViewController hem de TopMovieService gibi bileşenlerin doğru çalıştığından emin olmak için yazılmıştır.
+ */  
