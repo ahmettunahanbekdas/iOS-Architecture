@@ -8,7 +8,6 @@
 import Foundation
 import MovieBoxAPI
 
-// MARK: - Protocols & Enum
 protocol MovieListViewModelProtocol: AnyObject {
     var delegate: MovieListViewModelDelegate? { get set }
     func load()
@@ -25,14 +24,10 @@ enum MovieListViewModelOutput: Equatable {
     case showMovieList([MoviePresentation])
 }
 
-import Foundation
-import MovieBoxAPI
-
 final class MovieListViewModel: MovieListViewModelProtocol {
     
     weak var delegate: MovieListViewModelDelegate?
     private let service: TopMovieServiceProtocol
-    private var movies: [Movie] = []
     
     init(service: TopMovieServiceProtocol) {
         self.service = service
@@ -42,13 +37,11 @@ final class MovieListViewModel: MovieListViewModelProtocol {
         notify(.updateTitle("Movies"))
         notify(.setLoading(true))
         
-        service.fetchMovies { [weak self] (result) in
+        service.fetchMovies { [weak self] result in
             guard let self = self else { return }
             self.notify(.setLoading(false))
-            
             switch result {
             case .succes(let response):
-                self.movies = response.results
                 let presenatations = response.results.map({ MoviePresentation(movie: $0) })
                 self.notify(.showMovieList(presenatations))
             case .failure(let error):
@@ -58,11 +51,14 @@ final class MovieListViewModel: MovieListViewModelProtocol {
             }
         }
     }
-    func selectMovie(at index: Int) {
-        // TODO: Implement
-    }
     
     func notify(_ output: MovieListViewModelOutput) {
         delegate?.handleViewModelOutput(output)
     }
+    
+    func selectMovie(at index: Int) {
+        // TODO: Implement
+    }
+    
+  
 }

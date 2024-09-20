@@ -8,23 +8,19 @@
 import UIKit
 import MovieBoxAPI
 
-
 final class MovieListViewController: UIViewController {
-    
     var viewModel: MovieListViewModelProtocol! {
         didSet {
             viewModel.delegate = self
         }
     }
     private var movieList: [MoviePresentation] = []
-    
     @IBOutlet weak var tableView: UITableView!
         
     override func viewDidLoad() {
         super.viewDidLoad()
         viewModel.load()
     }
-    
 }
 
 extension MovieListViewController: MovieListViewModelDelegate {
@@ -60,5 +56,6 @@ extension MovieListViewController: UITableViewDataSource {
 extension MovieListViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         //TODO: Implement.
+        
     }
 }
