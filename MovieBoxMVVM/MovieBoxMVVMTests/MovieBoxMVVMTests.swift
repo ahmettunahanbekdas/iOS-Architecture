@@ -9,28 +9,51 @@ import XCTest
 @testable import MovieBoxMVVM
 
 final class MovieBoxMVVMTests: XCTestCase {
-
+    
+    private var view: MockView!
+    private var viewModel: MovieListViewModel!
+    private var service: MockTopMovieService!
+    
     override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+        view = MockView()
+        service = MockTopMovieService()
+        viewModel = MovieListViewModel(service: service)
+        viewModel.delegate = view
     }
-
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
-
+    
     func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-        // Any test you write for XCTest can be annotated as throws and async.
-        // Mark your test throws to produce an unexpected failure when your test encounters an uncaught error.
-        // Mark your test async to allow awaiting for asynchronous code to complete. Check the results with assertions afterwards.
-    }
+        // Given:
+        let movie1 = try ResourceLoader.loadMovie(resource: .movie1)
+        let movie2 = try ResourceLoader.loadMovie(resource: .movie2)
+        service.movies = [movie1, movie2]
+        
+        // When:
+        viewModel.load()
+        
+        // Then:
+        XCTAssertEqual(view.outputs.count, 4)
 
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
+        switch   view.outputs[0] {
+        case .updateTitle(_):
+            break
+        default:
+            XCTFail("First Output should be 'updateTitle'")
         }
+        
+        XCTAssertEqual(view.outputs[1], .setLoading(true))
+        XCTAssertEqual(view.outputs[2], .setLoading(false))
+        
+        let expectedMovies = [movie1, movie2].map({MoviePresentation(movie: $0)})
+        XCTAssertEqual(view.outputs[3], .showMovieList(expectedMovies))
     }
-
 }
+
+private class MockView: MovieListViewModelDelegate{
+    
+    var outputs: [MovieListViewModelOutput] = []
+    
+    func handleViewModelOutput(_ output: MovieBoxMVVM.MovieListViewModelOutput) {
+        outputs.append(output)
+    }
+}
+

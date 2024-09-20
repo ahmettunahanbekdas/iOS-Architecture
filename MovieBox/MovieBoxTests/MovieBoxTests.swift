@@ -11,10 +11,10 @@ import XCTest
 
 
 final class MovieBoxTests: XCTestCase {
-    var service: MockTopMovieService!
-    var view: MockMovieListView!
     var controller: MovieListViewController!
     
+    var service: MockTopMovieService!
+    var view: MockMovieListView!
     
     override func setUpWithError() throws {
         service = MockTopMovieService()

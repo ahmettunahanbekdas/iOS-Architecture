@@ -10,7 +10,7 @@ import MovieBoxAPI
 
 final class MovieListViewController: UIViewController {
     
-    @IBOutlet private var customView: MovieListView!
+    @IBOutlet  var customView: MovieListViewProtocol!
     
     var service: TopMovieServiceProtocol!
     var movieList: [Movie] = []

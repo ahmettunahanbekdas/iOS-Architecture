@@ -1,0 +1,26 @@
+
+{
+    "artistName": "NoCap",
+    "id": "1751364209",
+    "name": "Before I Disappear Again",
+    "releaseDate": "2024-08-16",
+    "kind": "albums",
+    "artistId": "1237732480",
+    "artistUrl": "https://music.apple.com/us/artist/nocap/1237732480",
+    "contentAdvisoryRating": "Explict",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/7d/23/fb/7d23fbe9-9a10-03a6-712d-b8ea7a443577/075679643759.jpg/100x100bb.jpg",
+    "genres": [
+        {
+            "genreId": "18",
+            "name": "Hip-Hop/Rap",
+            "url": "https://itunes.apple.com/us/genre/id18"
+        },
+        {
+            "genreId": "34",
+            "name": "Music",
+            "url": "https://itunes.apple.com/us/genre/id34"
+        }
+    ],
+    "url": "https://music.apple.com/us/album/before-i-disappear-again/1751364209"
+}
+
