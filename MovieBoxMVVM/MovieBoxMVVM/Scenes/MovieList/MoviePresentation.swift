@@ -17,10 +17,13 @@ class MoviePresentation: NSObject {
         self.detail = detail
         super.init()
     }
-}
-
-extension MoviePresentation {
+    
     convenience init(movie: Movie) {
         self.init(title: movie.name!, detail: movie.artistName!)
+    }
+    
+    override func isEqual(_ object: Any?) -> Bool {
+        guard let other = object as? MoviePresentation else { return false }
+        return self.title == other.title && self.detail == other.detail
     }
 }

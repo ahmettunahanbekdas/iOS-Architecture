@@ -9,14 +9,16 @@ import UIKit
 import MovieBoxAPI
 
 final class MovieListViewController: UIViewController {
+    
+    @IBOutlet weak var tableView: UITableView!
+    private var movieList: [MoviePresentation] = []
+    
     var viewModel: MovieListViewModelProtocol! {
         didSet {
             viewModel.delegate = self
         }
     }
-    private var movieList: [MoviePresentation] = []
-    @IBOutlet weak var tableView: UITableView!
-        
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         viewModel.load()
@@ -24,6 +26,15 @@ final class MovieListViewController: UIViewController {
 }
 
 extension MovieListViewController: MovieListViewModelDelegate {
+    func navigate(to route: MovieListViewRoute) {
+        switch route {
+        case.detail(let toViewModel):
+            let viewController = MovieDetailBuilder.make(with: toViewModel)
+            show(viewController, sender: nil)
+            break
+        }
+    }
+    
     func handleViewModelOutput(_ output: MovieListViewModelOutput) {
         switch output {
         case .updateTitle(let title):
@@ -33,13 +44,11 @@ extension MovieListViewController: MovieListViewModelDelegate {
         case.showMovieList(let movieList):
             self.movieList = movieList
             tableView.reloadData()
-            break //TODO: Implement
         }
     }
 }
 
 extension MovieListViewController: UITableViewDataSource {
-    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "MovieListCell", for: indexPath)
         let movie = movieList[indexPath.row]
@@ -55,7 +64,6 @@ extension MovieListViewController: UITableViewDataSource {
 
 extension MovieListViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        //TODO: Implement.
-        
+        viewModel.selectMovie(at: indexPath.row)
     }
 }

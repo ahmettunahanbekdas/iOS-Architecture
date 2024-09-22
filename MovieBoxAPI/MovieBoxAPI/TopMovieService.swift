@@ -28,7 +28,6 @@ public class TopMovieService: TopMovieServiceProtocol {
         AF.request(urlString).response { (response) in
             switch response.result {
             case.success(let data):
-                print(data)
                 let decoder = Decoders.plainDateDecoder
                 do{
                     let response = try decoder.decode(TopMovieResponse.self, from: data!)
