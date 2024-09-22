@@ -4,8 +4,6 @@
 
 This project adopts a modular architectural approach to optimize iOS application development processes, allowing components to be designed and managed independently. The application utilizes a Presenter layer and Dependency Injection (DI) to create a flexible and testable structure. Additionally, a Network framework has been developed to handle service operations, using the Alamofire library for managing network requests.
 
-![Project Image](link-to-your-image)
-
 ## Architecture
 
 ### Modular Architecture
