@@ -7,18 +7,6 @@
 
 import UIKit
 
-
-@objc protocol MovieListViewProtocol: AnyObject {
-    var delegate: MovieListViewDelegate? { get set }
-    func updateMovieList(_ movieList: [MoviePresentation])
-    func setLoading(_ isLoading: Bool)
-}
-
-@objc protocol MovieListViewDelegate: AnyObject {
-    func didSelectedMovie(at index: Int)
-}
- 
-
 class MovieListView: UIView {
     @IBOutlet weak var tableView: UITableView!
     private var movieList: [MoviePresentation] = []
