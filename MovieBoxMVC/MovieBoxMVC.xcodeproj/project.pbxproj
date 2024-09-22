@@ -129,15 +129,14 @@
 			isa = PBXGroup;
 			children = (
 				0E1412AC2C88836300BD35AD /* Test */,
-				0E1412AE2C88839700BD35AD /* ResourceLoader.swift */,
 			);
-			name = Commons;
-			path = ../Commons;
+			path = Commons;
 			sourceTree = "<group>";
 		};
 		0E1412AC2C88836300BD35AD /* Test */ = {
 			isa = PBXGroup;
 			children = (
+				0E1412AE2C88839700BD35AD /* ResourceLoader.swift */,
 				0E1412AD2C88836D00BD35AD /* Resources */,
 			);
 			path = Test;
@@ -167,7 +166,6 @@
 				0E25B5F32C809474006556FE /* MovieBoxMVC */,
 				0E3DA47C2C88543400D8AE87 /* MovieBoxMVCTests */,
 				0E25B60A2C809776006556FE /* Vendor */,
-				0E1412AB2C88833F00BD35AD /* Commons */,
 				0E25B5F22C809474006556FE /* Products */,
 			);
 			sourceTree = "<group>";
@@ -184,6 +182,7 @@
 		0E25B5F32C809474006556FE /* MovieBoxMVC */ = {
 			isa = PBXGroup;
 			children = (
+				0E1412AB2C88833F00BD35AD /* Commons */,
 				0ED1C1DB2C95634D002F3052 /* Comment */,
 				0ED535592C85AD5100650F86 /* Scenes */,
 				0ED5355A2C85AD5700650F86 /* Resources */,

@@ -158,7 +158,7 @@
 		0ED1C1EB2C956443002F3052 /* MovieBoxMVVM */ = {
 			isa = PBXGroup;
 			children = (
-				0EF8C6E42C9C3C06008FA6C7 /* Commens */,
+				0EF8C6E42C9C3C06008FA6C7 /* Commons */,
 				0ED1C2202C958771002F3052 /* Supporting Files */,
 				0ED1C21F2C958766002F3052 /* Resources */,
 				0ED1C21D2C958758002F3052 /* Scenes */,
@@ -234,12 +234,12 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		0EF8C6E42C9C3C06008FA6C7 /* Commens */ = {
+		0EF8C6E42C9C3C06008FA6C7 /* Commons */ = {
 			isa = PBXGroup;
 			children = (
 				0EF8C6E52C9C3C0F008FA6C7 /* Test */,
 			);
-			path = Commens;
+			path = Commons;
 			sourceTree = "<group>";
 		};
 		0EF8C6E52C9C3C0F008FA6C7 /* Test */ = {
