@@ -2,10 +2,10 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:MovieBoxMVVM/MovieBoxMVVM.xcodeproj">
+      location = "group:MovieBoxMVC/MovieBoxMVC.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:MovieBox/MovieBox.xcodeproj">
+      location = "group:MovieBoxMVVM/MovieBoxMVVM.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:MovieBoxAPI/MovieBoxAPI.xcodeproj">

@@ -6,6 +6,22 @@
       parallelizeBuildables = "YES"
       buildImplicitDependencies = "YES"
       buildArchitectures = "Automatic">
+      <BuildActionEntries>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "0E25B5F02C809474006556FE"
+               BuildableName = "MovieBoxMVC.app"
+               BlueprintName = "MovieBoxMVC"
+               ReferencedContainer = "container:MovieBoxMVC.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+      </BuildActionEntries>
    </BuildAction>
    <TestAction
       buildConfiguration = "Debug"
@@ -20,9 +36,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "0E3DA47A2C88543400D8AE87"
-               BuildableName = "MovieBoxTests.xctest"
-               BlueprintName = "MovieBoxTests"
-               ReferencedContainer = "container:MovieBox.xcodeproj">
+               BuildableName = "MovieBoxMVCTests.xctest"
+               BlueprintName = "MovieBoxMVCTests"
+               ReferencedContainer = "container:MovieBoxMVC.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -37,6 +53,16 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "0E25B5F02C809474006556FE"
+            BuildableName = "MovieBoxMVC.app"
+            BlueprintName = "MovieBoxMVC"
+            ReferencedContainer = "container:MovieBoxMVC.xcodeproj">
+         </BuildableReference>
+      </BuildableProductRunnable>
    </LaunchAction>
    <ProfileAction
       buildConfiguration = "Release"
@@ -44,6 +70,16 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "0E25B5F02C809474006556FE"
+            BuildableName = "MovieBoxMVC.app"
+            BlueprintName = "MovieBoxMVC"
+            ReferencedContainer = "container:MovieBoxMVC.xcodeproj">
+         </BuildableReference>
+      </BuildableProductRunnable>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

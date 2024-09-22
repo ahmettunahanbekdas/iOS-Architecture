@@ -79,14 +79,14 @@
 		0E1412B02C88862300BD35AD /* movie1.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = movie1.json; sourceTree = "<group>"; };
 		0E1412B72C88AC7900BD35AD /* Optional+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Optional+Ext.swift"; sourceTree = "<group>"; };
 		0E1412B92C88ACD600BD35AD /* Array+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Ext.swift"; sourceTree = "<group>"; };
-		0E25B5F12C809474006556FE /* MovieBox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MovieBox.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0E25B5F12C809474006556FE /* MovieBoxMVC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MovieBoxMVC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E25B5F42C809474006556FE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0E25B5F62C809474006556FE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		0E25B5FD2C809475006556FE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0E25B6002C809475006556FE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0E25B6022C809475006556FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0E25B60B2C8097C5006556FE /* MovieBoxAPI.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = MovieBoxAPI.xcodeproj; path = ../../MovieBoxAPI/MovieBoxAPI.xcodeproj; sourceTree = "<group>"; };
-		0E3DA47B2C88543400D8AE87 /* MovieBoxTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MovieBoxTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0E3DA47B2C88543400D8AE87 /* MovieBoxMVCTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MovieBoxMVCTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E3DA47D2C88543400D8AE87 /* MovieBoxTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieBoxTests.swift; sourceTree = "<group>"; };
 		0E42CE112C95A440006DBC12 /* MovieList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MovieList.storyboard; sourceTree = "<group>"; };
 		0EBDC8E02C89BA2A005A6A5C /* movie2.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = movie2.json; sourceTree = "<group>"; };
@@ -164,8 +164,8 @@
 		0E25B5E82C809474006556FE = {
 			isa = PBXGroup;
 			children = (
-				0E25B5F32C809474006556FE /* MovieBox */,
-				0E3DA47C2C88543400D8AE87 /* MovieBoxTests */,
+				0E25B5F32C809474006556FE /* MovieBoxMVC */,
+				0E3DA47C2C88543400D8AE87 /* MovieBoxMVCTests */,
 				0E25B60A2C809776006556FE /* Vendor */,
 				0E1412AB2C88833F00BD35AD /* Commons */,
 				0E25B5F22C809474006556FE /* Products */,
@@ -175,13 +175,13 @@
 		0E25B5F22C809474006556FE /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				0E25B5F12C809474006556FE /* MovieBox.app */,
-				0E3DA47B2C88543400D8AE87 /* MovieBoxTests.xctest */,
+				0E25B5F12C809474006556FE /* MovieBoxMVC.app */,
+				0E3DA47B2C88543400D8AE87 /* MovieBoxMVCTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		0E25B5F32C809474006556FE /* MovieBox */ = {
+		0E25B5F32C809474006556FE /* MovieBoxMVC */ = {
 			isa = PBXGroup;
 			children = (
 				0ED1C1DB2C95634D002F3052 /* Comment */,
@@ -191,7 +191,7 @@
 				0E1412B62C88AC6100BD35AD /* Helpers */,
 				0ED535582C85AD3700650F86 /* Supporting Files */,
 			);
-			path = MovieBox;
+			path = MovieBoxMVC;
 			sourceTree = "<group>";
 		};
 		0E25B60A2C809776006556FE /* Vendor */ = {
@@ -211,12 +211,12 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		0E3DA47C2C88543400D8AE87 /* MovieBoxTests */ = {
+		0E3DA47C2C88543400D8AE87 /* MovieBoxMVCTests */ = {
 			isa = PBXGroup;
 			children = (
 				0E3DA47D2C88543400D8AE87 /* MovieBoxTests.swift */,
 			);
-			path = MovieBoxTests;
+			path = MovieBoxMVCTests;
 			sourceTree = "<group>";
 		};
 		0ED1C1DB2C95634D002F3052 /* Comment */ = {
@@ -293,9 +293,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		0E25B5F02C809474006556FE /* MovieBox */ = {
+		0E25B5F02C809474006556FE /* MovieBoxMVC */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0E25B6052C809475006556FE /* Build configuration list for PBXNativeTarget "MovieBox" */;
+			buildConfigurationList = 0E25B6052C809475006556FE /* Build configuration list for PBXNativeTarget "MovieBoxMVC" */;
 			buildPhases = (
 				0E25B5ED2C809474006556FE /* Sources */,
 				0E25B5EE2C809474006556FE /* Frameworks */,
@@ -306,14 +306,14 @@
 			);
 			dependencies = (
 			);
-			name = MovieBox;
+			name = MovieBoxMVC;
 			productName = MovieBox;
-			productReference = 0E25B5F12C809474006556FE /* MovieBox.app */;
+			productReference = 0E25B5F12C809474006556FE /* MovieBoxMVC.app */;
 			productType = "com.apple.product-type.application";
 		};
-		0E3DA47A2C88543400D8AE87 /* MovieBoxTests */ = {
+		0E3DA47A2C88543400D8AE87 /* MovieBoxMVCTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0E3DA4812C88543400D8AE87 /* Build configuration list for PBXNativeTarget "MovieBoxTests" */;
+			buildConfigurationList = 0E3DA4812C88543400D8AE87 /* Build configuration list for PBXNativeTarget "MovieBoxMVCTests" */;
 			buildPhases = (
 				0E3DA4772C88543400D8AE87 /* Sources */,
 				0E3DA4782C88543400D8AE87 /* Frameworks */,
@@ -324,9 +324,9 @@
 			dependencies = (
 				0E3DA4802C88543400D8AE87 /* PBXTargetDependency */,
 			);
-			name = MovieBoxTests;
+			name = MovieBoxMVCTests;
 			productName = MovieBoxTests;
-			productReference = 0E3DA47B2C88543400D8AE87 /* MovieBoxTests.xctest */;
+			productReference = 0E3DA47B2C88543400D8AE87 /* MovieBoxMVCTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -348,7 +348,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 0E25B5EC2C809474006556FE /* Build configuration list for PBXProject "MovieBox" */;
+			buildConfigurationList = 0E25B5EC2C809474006556FE /* Build configuration list for PBXProject "MovieBoxMVC" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -367,8 +367,8 @@
 			);
 			projectRoot = "";
 			targets = (
-				0E25B5F02C809474006556FE /* MovieBox */,
-				0E3DA47A2C88543400D8AE87 /* MovieBoxTests */,
+				0E25B5F02C809474006556FE /* MovieBoxMVC */,
+				0E3DA47A2C88543400D8AE87 /* MovieBoxMVCTests */,
 			);
 		};
 /* End PBXProject section */
@@ -452,7 +452,7 @@
 /* Begin PBXTargetDependency section */
 		0E3DA4802C88543400D8AE87 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 0E25B5F02C809474006556FE /* MovieBox */;
+			target = 0E25B5F02C809474006556FE /* MovieBoxMVC */;
 			targetProxy = 0E3DA47F2C88543400D8AE87 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -599,7 +599,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 6HT5X4W7TW;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "/Users/ahmettunahanbekdas/Documents/Swift UIKit Projects/MovieBox/MovieBox/MovieBox/Supporting Files/Info.plist";
+				INFOPLIST_FILE = "/Users/ahmettunahanbekdas/Documents/Swift UIKit Projects/iOS-Architecture/MovieBoxMVC/MovieBoxMVC/Supporting Files/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = "";
@@ -612,7 +612,7 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.ahmettunahanbekdas.MovieBox;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = MovieBoxMVC;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -628,7 +628,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 6HT5X4W7TW;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "/Users/ahmettunahanbekdas/Documents/Swift UIKit Projects/MovieBox/MovieBox/MovieBox/Supporting Files/Info.plist";
+				INFOPLIST_FILE = "/Users/ahmettunahanbekdas/Documents/Swift UIKit Projects/iOS-Architecture/MovieBoxMVC/MovieBoxMVC/Supporting Files/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = "";
@@ -641,7 +641,7 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.ahmettunahanbekdas.MovieBox;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = MovieBoxMVC;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -662,7 +662,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MovieBox.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/MovieBox";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MovieBoxMVC.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/MovieBoxMVC";
 			};
 			name = Debug;
 		};
@@ -680,14 +680,14 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MovieBox.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/MovieBox";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MovieBoxMVC.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/MovieBoxMVC";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		0E25B5EC2C809474006556FE /* Build configuration list for PBXProject "MovieBox" */ = {
+		0E25B5EC2C809474006556FE /* Build configuration list for PBXProject "MovieBoxMVC" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0E25B6032C809475006556FE /* Debug */,
@@ -696,7 +696,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		0E25B6052C809475006556FE /* Build configuration list for PBXNativeTarget "MovieBox" */ = {
+		0E25B6052C809475006556FE /* Build configuration list for PBXNativeTarget "MovieBoxMVC" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0E25B6062C809475006556FE /* Debug */,
@@ -705,7 +705,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		0E3DA4812C88543400D8AE87 /* Build configuration list for PBXNativeTarget "MovieBoxTests" */ = {
+		0E3DA4812C88543400D8AE87 /* Build configuration list for PBXNativeTarget "MovieBoxMVCTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0E3DA4822C88543400D8AE87 /* Debug */,
